@@ -8,7 +8,7 @@ require('dotenv').config()
 
 
 const mongoUrl =
-  "mongodb+srv://awesomeprachipatel:admin@cluster0.3ie2xy8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" ;
+  "mongodb+srv://awesomeprachipatel:typepassword@cluster0.3ie2xy8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" ;
 
 const JWT_SECRET =
   "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jdsds039[]]pou89ywe";
