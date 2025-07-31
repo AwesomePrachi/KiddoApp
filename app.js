@@ -6,12 +6,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require('dotenv').config()
 
-
-const mongoUrl =
-  "mongodb+srv://awesomeprachipatel:typepassword@cluster0.3ie2xy8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" ;
-
-const JWT_SECRET =
-  "hvdvay6ert72839289()aiyg8t87qt72393293883uhefiuh78ttq3ifi78272jdsds039[]]pou89ywe";
+const mongoUrl = process.env.MONGO_URL; 
+const JWT_SECRET = process.env.JWT_SECRET;
 mongoose
   .connect(mongoUrl)
   .then(() => {
