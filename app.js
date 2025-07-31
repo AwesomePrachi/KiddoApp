@@ -24,7 +24,6 @@ const User = mongoose.model("UserInfo");
 const User1 = mongoose.model("UserInfo1");
 
 
-
 app.get("/", (req, res) => {
   res.send({ status: "Started" });
 });
@@ -70,7 +69,6 @@ app.post('/feedback',async (req, res) => {
 });
 
 
-
 app.post("/login-user", async (req, res) => {
   const { email, password } = req.body;
   const oldUser = await User.findOne({ email: email });
@@ -91,17 +89,10 @@ app.post("/login-user", async (req, res) => {
     return res.send({status:"notok", data: "Invalid Credential" });
 
   }
-
-
-
-
 });
 
 
-
-
-
-const PORT=process.env;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
-  console.log("Node js server started.");
+  console.log(`Server running on port ${PORT}`);
 });
